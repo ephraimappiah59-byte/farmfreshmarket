@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: relative;
+  background: #28a745;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 28px;
+}
+
+/* Auth Buttons (Sign In / Sign Up) */
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.auth-buttons .btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+.auth-buttons .signin {
+  background: white;
+  color: #28a745;
+  border: 2px solid #28a745;
+}
+.auth-buttons .signin:hover {
+  background: #218838;
+  color: white;
+  transform: scale(1.05);
+}
+.auth-buttons .signup {
+  background: #ffb703;
+  color: white;
+  border: 2px solid #ffb703;
+}
+.auth-buttons .signup:hover {
+  background: #e09a00;
+  transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #333;
+  padding: 12px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ffb703;
+}
+
+/* Products Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.product h3 {
+  margin: 10px 0;
+}
+.product button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product button:hover {
+  background: #1e7036;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Forms (Sign In / Sign Up) */
+.form-container {
+  width: 90%;
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #28a745;
+}
+.form-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container button {
+  width: 95%;
+  padding: 12px;
+  background: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-container button:hover {
+  background: #1e7036;
+}
+.form-container p {
+  margin-top: 15px;
+}
+.form-container a {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+}
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* 🌍 Responsive Design */
+
+/* For tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .auth-buttons {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .form-container {
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+}
+  
